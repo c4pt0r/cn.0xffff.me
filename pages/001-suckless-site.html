@@ -1,0 +1,65 @@
+<pre>
+
+Preparation
+-----------
+
+0. Download and build smu / darkhttpd / saait
+
+$ git clone https://github.com/Gottox/smu
+$ cd smu; make; cd ..
+$ git clone https://github.com/emikulic/darkhttpd.git
+$ cd darkhttpd; make; cd ..
+$ git clone git://git.codemadness.org/saait
+$ cd saait; make; cd..
+
+$ sudo cp ./smu/smu /usr/bin/
+$ sudo cp ./darkhttpd/darkhttpd /usr/bin/
+$ sudo cp ./saait/saait /usr/bin/
+
+
+1. Create www user
+
+$ sudo su
+# useradd -G www www
+# mkdir /var/www
+# chown -R www:www /var/www
+# mkdir /var/wwwlog
+# chown -R www:www /var/wwwlog
+# mkdir -p /home/www/.ssh
+# chown -R www:www /home/www
+# su www
+$ cat <<EOF > /home/www/.ssh/authorized_keys
+$$$_your_ssh_public_key_$$$
+EOF
+
+2. Create systemd service for darkhttpd
+
+# cat <<EOF > /etc/systemd/system/darkhttpd.service
+[Unit]
+Description=darkhttpd daemon
+After=syslog.target network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/darkhttpd /var/www --chroot --uid www --gid www --log /var/wwwlog/log
+Restart= always
+RestartSec=1min
+ExecStop=/usr/bin/killall darkhttpd
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# systemctl enable darkhttpd.service
+# systemctl start darkhttpd.service
+# systemctl status darkhttpd.service
+
+
+Generate the site (by saait)
+-------------------------------
+
+$ git clone https://github.com/c4pt0r/_.0xffff.me
+$ cd _.0xffff.me; ./gen.sh
+$ rsync -Pav -e "ssh -i $HOME/.ssh/_your_private_key_" output/ www@your.site:/var/www/
+ 
