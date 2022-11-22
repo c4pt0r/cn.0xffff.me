@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<h1><del>werc</del> <span style="">crew</span> - A sane web anti-framework<span style="">, that suckless</span></h1>
+
+<p><del>Werc</del> <span style="">Crew</span> is a minimalist web anti-framework built following the <a href="http://doc.cat-v.org/unix/">Unix</a> and <a href="http://plan9.cat-v.org">Plan 9</a> <em>tool philosophy</em> of software design. <span style="">Crew is a <a href="http://suckless.org">suckless</a> clone of werc, well, not a 100% clone&hellip;But I really like the idea of werc and its weird sense of humor.</span></p>
+
+<p><del>Werc</del><span style="">Crew</span> avoids the pain of managing collections of websites and developing web applications.</p>
+
+<ul>
+<li>Database free, uses files and directories instead.</li>
+<li><del>Written using <a href="http://rc.cat-v.org">the rc shell</a>, leveraging the standard Unix/Plan 9 command toolkit.</del> <span style="">Written in Go, single file, which suckless, yo!</span></li>
+<li>Minimize tedious work: eg., no need to ever write HTML, use markdown (or any other format) instead.</li>
+<li>Very minimalist yet extensible codebase: <del>highly functional core is 150 lines, with extra functionality in modular <a href="/apps/">apps</a>.</del> <span style=""> Checkout <a href="https://github.com/c4pt0r/crew/blob/master/main.go">main.go</a></span></li>
+</ul>
+
+<h2>Features</h2>
+
+<p>Here are some of the features provided by <del>werc</del><span style="">crew</span>:</p>
+
+<ul>
+<li><span style="">When you want to turn a directory into a website in a hurry :)</span></li>
+<li>Good integration with pre-existing content, you can add HTML or plain text files and they will be seamlessly integrated with the rest of the site.</li>
+<li>You can use your favorite tools (text editor, shell, file manager, etc) to edit, manipulate and manage data stored in <del>werc</del><span style="">crew</span>.</li>
+<li><del>Designed to manage any number of ‘virtual’ domains that share a common style and layout from a single werc installation.</del><span style="">No, too complicated, single directory is easier</span></li>
+<li><del>Configuration and customization can be at at any level: global, per-domain-group, domain-wide, directory sub-tree, and single file.</del><span style="">Configuration should be with the file and code, if you want to change the layout, just change the code and recompile</span></li>
+<li>Can trivially run multiple (customized) versions of <del>werc</del><span style="">crew</span> side by side. <span style="">Yeah, just launch another process</span></li>
+<li>Very simple and flexible user management and permissions system.<span style="">You should take good care of your own file system</span></li>
+<li><del>Applications can be easily combined: eg., add comments to your blog or wiki by enabling the ‘bridge’ app; or by enabling the ‘diridir’ wiki convert any document tree into a wiki.</del><span style="">No, keep it simple</span></li>
+<li><del>Can easily write werc ‘apps’ and extensions in <em>any</em> language! (But of course, rc is recommended).</del><span style="">No, if you want to modify crew, you should understand what you&rsquo;re going to do, and recompile main.go</span></li>
+</ul>
+
+<h2>Install Requirements</h2>
+
+<p><del>All you need is some Plan 9 commands (cat, grep, sed, rc, etc.), and an HTTP server with CGI support.</del></p>
+
+<p><del>Werc runs on any Unix-like system where <a href="https://9fans.github.io/plan9port/">Plan 9 from User Space</a>, <a href="https://tools.suckless.org/9base/">9base</a>, or <a href="https://code.9front.org/hg/frontbase">frontport</a> are available (this includes Linux, *BSD, OS X and Solaris), and on Plan 9.</del></p>
+
+<p><del>Werc can use any HTTP server that can handle CGI, and has been tested with at least Apache, Lighttpd, Cherokee, nhttpd, Hiawatha, rc-httpd, cgd, and others.</del></p>
+
+<p><span style="">Basiclly any systems, but I&rsquo;ve never tested crew on Plan9, I will, no, I won&rsquo;t</span></p>
+
+<p><del>Werc</del><span style="">Crew</span> uses markdown by default (and the standard <del>Perl</del> markdown <span style="">(gomarkdown/markdown)</span> is included with the distribution), to format documents, but any other formatting system can be used.</p>
+
+<h2>Source</h2>
+
+<p>To get a copy of the latest development code using git, do:</p>
+
+<pre><code>   git clone https://github.com/c4pt0r/crew
+</code></pre>
+
+<p>You can also <a href="https://github.com/c4pt0r/crew">browse the online repository</a>.</p>
+
+<h2>Contact</h2>
+
+<p><del>For questions, suggestions, bug reports and contributing patches you can join the werc mailing list. To join, send a message with a body consisting only of the word <em>subscribe</em> to werc-owner@cat-v.org. After you get the confirmation notice, you can post by sending messages to werc@cat-v.org.</del></p>
+
+<p><del>To track commit messages, you can join the werc-commits mailing list. To join, send a message with a body consisting only of the word <em>subscribe</em> to werc-commits-owner@cat-v.org.</del></p>
+
+<p><del>On irc, join <a href="irc://irc.oftc.org/cat-v">#cat-v</a> on irc.oftc.org</del></p>
+
+<p><span style="">I don&rsquo;t use IRC :), just feel free to <a href="https://github.com/c4pt0r/crew/issues">fire issue on Github</a>, I&rsquo;ll take a look when I have time</span></p>
+
+<p><del>Don&rsquo;t</del><span style=""> mail to me: i@huangdx.net</span></p>
+
+<h2>License</h2>
+
+<p>Public domain, <a href="http://harmful.cat-v.org/economics/intellectual_property/">because so called ‘intellectual property’ is an oxymoron</a>.</p>
+
+<p>Alternatively if your prefer it or your country’s brain dead copyright law doesn’t recognize the public domain werc is made available under the terms of the MIT and ISC licenses.</p>
+
+<p><span style="">crew uses MIT, yo! But I totally agree with what was said above ^^^</span></p>
+
+<h2>Credits</h2>
+
+<p>Thanks to <a href="http://uriel.cat-v.org/">Uriel</a> for creating werc.</p>
+
+<p>Thanks to Kris Maglione (aka JG) for implementing rss feeds, for writing the awk rc-templating system, and other help and inspiration (some parts of the code were based on JG’s diri wiki).</p>
+
+<p>Thanks to Mechiel (aka oksel) for the md_cache script.</p>
+
+<p>Thanks Garbeam (aka arg) for writing the original diri code and showing that writing complex web apps in rc was feasible.</p>
+
+<p>Thanks to Ethan Gardner for writing rc-httpd.</p>
+
+<p>And thanks to everyone else whom we may have forgotten and that has provided fixes and feedback.</p>
+
+<hr>
+
+<p><del>To post a comment you need to login first.</del> <span style="">No, you don&rsquo;t need it</span></p>
+
+<html>
