@@ -1,5 +1,3 @@
-# Building a database in the 2020s
-
 It's been a long time since I wrote anything, so I'll share what I've been thinking about more recently. Just consider it a record of work.
 
 Let's start with an important question: If we were to redesign a new database today from the ground up, what would the architecture look like?
