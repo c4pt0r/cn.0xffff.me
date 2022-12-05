@@ -7,6 +7,7 @@ body {
 	font-family: sans-serif;
 	margin: 0;
 	padding: 1ex;
+    line-height: 130%;
 }
 /* HTML5 semantic tags: some (older) browsers display this inline by default */
 article, figcaption, figure, header, main, nav {
