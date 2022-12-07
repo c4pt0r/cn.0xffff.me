@@ -14,8 +14,8 @@ A modern database architecture would likely aim to simplify and unify the underl
 
 For these trends and pain points above, mapped to the system design:
 
-- Cloud-native design is important, not only in the separation of storage and accounting, but the separation of all that can be separated, because now what we want to do is no longer software, but service and users do not care about the things behind the service, as will be discussed below.
-- Think of Serverless as the final product form (Note: Serverless is not a technology, but a product form), and reverse the evolutionary path of the architecture.
+- Cloud-native design is important, not only in the separation of storage and computing, but the separation of all that can be separated, because now what we want to do is no longer software, but service and users do not care about the things behind the service, as will be discussed below.
+- Think of Serverless as the final product form (Note: Serverless is not a technology, but a product form), take Serverless as the final products form, and think backwards to the evolving path.
 - For the new generation of databases, HTAP is the mandatory technology route (even AWS Aurora provides Zero ETL to RedShift). A prediction: the future of the database will provide HTAP capability
 
 With these assumptions in mind, basically, for TiDB, over the past year, it has focused on re-architecting the database to run as a cloud service, leveraging the advantages of the cloud infrastructure to improve performance and scalability. The recent release of the TiDB Serverless Tier is an important milestone in this process, representing the first iteration of the new engine. From a  technical and engineering perspective, this work likely involved significant redesign and restructuring of the underlying technology, as well as careful testing and optimization to ensure that the database can deliver the performance and reliability expected of a modern database.
@@ -91,7 +91,7 @@ In addition to Serverless, the modern developer experience (DX) includes many ot
 
 I mentioned above is basically no man's land, and it's hard to foresee all the challenges in advance. This paragraph concludes with a list of some interesting, though certainly incomplete, challenges that I hope will inspire you:
 
-- When the data on the storage engines of different tenants are in S3, you could theoretically unlock a larger market based on data sharing and exchange (imagine Google Docs), or on S3 + MVCC you could theoretically achieve a Git-like version control of the data, imagine the smooth experience just like `git checkout <brunch>`, only the difference is that you switch to your database snapshot (I know there are already database products like this on the cloud), which will bring a lot of new application scenarios and unique value.
+- When the data on the storage engines of different tenants are in S3, you could theoretically unlock a larger market based on data sharing and exchange (imagine Google Docs), or on S3 + MVCC you could theoretically achieve a Git-like version control of the data, imagine the smooth experience just like `git checkout <branch>`, only the difference is that you switch to your database snapshot (I know there are already database products like this on the cloud), which will bring a lot of new application scenarios and unique value.
 
 - New business model. There's a potential to be a new business model for database providers, especially in partnership with cloud vendors who can offer the necessary infrastructure and support. By providing a DBaaS as a product, database providers can offer customers the convenience and flexibility of using a cloud-based database without the need for them to manage the infrastructure themselves on their own cloud.
 
