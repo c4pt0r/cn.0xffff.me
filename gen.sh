@@ -1,5 +1,5 @@
 #!/bin/sh
 
-mkdir -p output
+mkdir -p public
 find pages -type f -name '*.cfg' -print0 | sort -zr | xargs -0 saait
-cp style.css print.css output/
+cp style.css print.css public/
