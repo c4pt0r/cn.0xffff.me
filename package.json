@@ -1,6 +1,6 @@
 {
   "scripts": {
-        "build": "yum install wget; wget https://codemadness.org/releases/saait/saait-0.8.tar.gz; tar zxvf ./saait-0.8.tar.gz; cd saait-0.8; make; cd .. ; PATH=./saait-0.8/:$PATH github.com/c4pt0r/_.0xffff.me/gen.sh"
+        "build": "yum install wget; wget https://codemadness.org/releases/saait/saait-0.8.tar.gz; tar zxvf ./saait-0.8.tar.gz; cd saait-0.8; make; cd .. ; ls -la ; PATH=./saait-0.8/:$PATH github.com/c4pt0r/_.0xffff.me/gen.sh"
     }
 }
 
