@@ -23,4 +23,5 @@ find ../pages -type f -name '*.cfg' -print0 | sort -zr | xargs -0 saait -t ../te
 cp ../style.css ../print.css ../public.asc output/
 
 # copy to public directory
+rm -rf ../public
 cp -r ./output ../public
