@@ -87,8 +87,8 @@ code {
 }
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: #000;
-		color: #bdbdbd;
+		background-color: #121417;
+		color: #c9d1d9;
 	}
 	code {
 		background-color: #111;
@@ -98,7 +98,7 @@ code {
 		border-color: #222;
 	}
 	a {
-		color: #56c8ff;
+		color: #58a6ff;
 	}
 	#main {
 		border-top: 3px solid #222;
