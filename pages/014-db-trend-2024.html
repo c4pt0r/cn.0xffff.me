@@ -4,7 +4,8 @@
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 <title>db-trend-2024</title>
 </head>
-<body><h1 id='big-data-and-beyond-my-predictions-for-2024'>Big Data and Beyond: My Predictions for 2024</h1>
+<body>
+<p>by Ed Huang, Cofounder / CTO, PingCAP</p>
 <p>It&#39;s been a long time since I wrote about database trends. Taking  advantage of the holiday break, I decided to write a bit. If I had to  describe the world of data technology in the past few years with one  word, it would be: change. From the architectural changes in database  kernel technology to the various innovations of new and old  manufacturers, and even the real-world workloads of users, I feel that  we are in a period of significant transformation. In this article, I  will discuss some points that have made a strong impression on me. As  these are personal opinions, they might be wrong :)</p>
 <h2 id='the-problem-of-big-data-has-been-almost-solved-and-elasticity-will-become-the-new-hotspot'>The problem of big data has been (almost) solved, and elasticity will become the new hotspot</h2>
 <p>Looking back nine years ago, when we were just starting to design TiDB, the biggest pain point for databases in the world was mostly about scalability. This is evident from the systems that were born around that time, such as DynamoDB, Spanner, CockroachDB, TiDB, and even Aurora initially. Their main selling point was better scalability compared to traditional RDBMS. TiDB&#39;s initial motivation was also to solve the various inconveniences brought by MySQL&#39;s past sharding solutions, which were essentially a compromise for scalability.</p>
@@ -39,7 +40,7 @@ SELECT * FROM tbl WHERE user_id = xxx and vector_search([f32,f32,f32,f32 ...])
 <ol>
 <li>API First: Database platforms should provide stable/forward-compatible APIs. Everything that can be done on the management platform should be possible via API, and ideally, your management platform should be built on your API. This is also key to providing a fully functional, easy-to-use CLI tool.</li>
 <li>Use a unified authentication system: In the design phase, integrate the management authentication and user system with the database&#39;s internal authentication system. The traditional database&#39;s username and password-based permission system is not enough for the cloud era. This lays the foundation for subsequent integration with the cloud&#39;s IAM and Secret management systems.</li>
-<li>Build different/stable small tools for different functionalities (Do one thing, do things well), but call them through a unified CLI entry and semantic system. Good examples are <code>rustup</code>, and even <code>git</code>.</li>
+<li>Build different/stable small tools for different functionalities (Do one thing, do things well), but call them through a unified CLI entry and semantic system. Good examples are rustup, and even git.</li>
 
 </ol>
 <p>There are other tips about developer tools that I discussed in an article a few years ago about developer experience, which is still relevant. Feel free to check it out if interested.</p>
