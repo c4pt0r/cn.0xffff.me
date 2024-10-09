@@ -2,7 +2,7 @@
 # Build script for Vercel
 
 # make sure wget is installed
-yum install wget
+yum -y install wget
 
 # get saait
 wget https://codemadness.org/releases/saait/saait-0.8.tar.gz
