@@ -20,7 +20,7 @@ fi
 
 mkdir -p output
 find ../pages -type f -name '*.cfg' -print0 | sort -zr | xargs -0 saait -t ../templates -c ../config.cfg
-cp ../style.css ../print.css ../public.asc output/
+cp ../style.css ../print.css ../public.asc ../script.js output/
 
 # copy to public directory
 rm -rf ../public
