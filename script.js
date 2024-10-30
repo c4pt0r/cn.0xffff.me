@@ -1,3 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded with JavaScript');
-})
+window.addEventListener('load', function() {
+    document.body.classList.add('dark-theme');
+});

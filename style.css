@@ -104,3 +104,33 @@ code {
 		border-top: 3px solid #222;
 	}
 }
+
+.light-theme {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+.light-theme code {
+    background-color: #eee !important;
+}
+.light-theme hr,
+.light-theme #main {
+    border-color: #aaa !important;
+}
+.light-theme a {
+    color: #000 !important;
+}
+
+.dark-theme {
+    background-color: #121417 !important;
+    color: #c9d1d9 !important;
+}
+.dark-theme code {
+    background-color: #111 !important;
+}
+.dark-theme hr,
+.dark-theme #main {
+    border-color: #222 !important;
+}
+.dark-theme a {
+    color: #c9d1d9 !important;
+}
